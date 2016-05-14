@@ -1,0 +1,21 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
+              <hr>
+              <h4 class="text-center">
+                <small>
+                  <strong>©{{ .Now.Year }} <a href="mailto:{{ .Site.Params.email }}" class="uncolored">{{ .Site.Params.Author }}</a></strong>
+                  <br> Build with <a href="https://gohugo.io" class="uncolored">Hugo</a> on <a href="https://pages.github.com" class="uncolored">GitHub pages</a>
+                </small>
+              </h4>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{ if isset .Site.Params "Ganalytics" }}{{ partial "ga.html" . }}{{ end }}
+
+</body>
+</html>
