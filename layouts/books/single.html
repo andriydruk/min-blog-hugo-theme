@@ -1,0 +1,21 @@
+<div class="list-group borderless">
+  <div class="row">
+    <div class="span4">
+    	<img src="{{ .Params.Cover }}" style="float:left" width="150" height="198">
+      	<div class="content-heading">
+      		<div class="col-lg-offset-3 col-md-offset-2">
+      			<h4 class="list-group-item-heading">{{ .Title }}<small> / {{ .Params.author}} </small></h4>
+      			{{ .Content }}
+      			<p></p>
+      			<div class="container-fluid">
+				    <div class="row">                                     
+				    	<a href="{{ .Params.Googleplaybooks }}"><img src="{{ $.Site.BaseURL }}/img/google-play-badge.png" width="134" height="40"></a>
+				    	<a href="{{ .Params.Amazon }}"><img src="{{ $.Site.BaseURL }}/img/amazon-logo_black.png" width="84" height="40"></a>
+				    </div>
+      		</div>
+      		</div>
+      	</div>
+    </div>
+  </div>
+</div>
+

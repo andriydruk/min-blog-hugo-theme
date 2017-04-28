@@ -9,13 +9,11 @@
        <div class="row">
          <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
              <h1 class="text-uppercase text-center">{{ title .Title }}</h1>
-             {{ if isset .Site.Params "Description" }}
                   <h4 class="text-center">
                     <small>
                       Published {{ dateFormat .Site.Params.DateForm .Date }} <strong>by <a href="mailto:{{ .Site.Params.email }}?Subject={{ title .Title }}" class="uncolored">{{ .Site.Params.Author }}</a></strong>
                     </small>
                   </h4>
-            {{ end }}
             <hr class="small">
          </div>
        </div>

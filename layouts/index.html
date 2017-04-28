@@ -9,20 +9,21 @@
      <div class="row">
        <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
            <h1 class="text-uppercase text-center">{{ title .Site.Title }}</h1>
-           <div class="row text-center">
+<!--            <div class="row text-center">
              <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
-               <a href="https://twitter.com/{{ .Site.Social.twitter }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-               <a href="https://github.com/{{ .Site.Social.github }}"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-               <a href="https://www.linkedin.com/in/{{ .Site.Social.linkedin }}"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+               <a href="https://twitter.com/{{ .Site.Params.Twitter }}"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+               <a href="https://github.com/{{ .Site.Params.Github }}"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+               <a href="https://www.linkedin.com/in/{{ .Site.Params.Linkedin }}"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
              </div>
-           </div>
-           {{ if isset .Site.Params "Description" }}
+           </div> -->
                 <h4 class="text-center">
                   <small>
-                    {{ .Site.Params.Description }}
+                    <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored">Projects</a></strong> •
+                    <strong><a href="https://github.com/{{ .Site.Params.Github }}" class="uncolored">Github</a></strong> •
+                    <strong><a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="uncolored">Twitter</a></strong> •
+                    <strong><a href="{{ .Site.Params.Baseurl }}/post/about" class="uncolored">About</a></strong>
                   </small>
                 </h4>
-          {{ end }}
           <hr class="small">
        </div>
      </div>
@@ -34,7 +35,7 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <div class="list-group borderless">
-            {{ range first 10 (where .Data.Pages "Type" "post") }}
+            {{ range first 10 (where .Data.Pages ".Params.onmain" true) }}
                 {{ .Render "summary"}}
             {{ end }}
           </div>
