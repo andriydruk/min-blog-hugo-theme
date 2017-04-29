@@ -13,7 +13,7 @@
     "@brand-danger": "#d9534f",
     "@body-bg": "#fff",
     "@text-color": "@gray-dark",
-    "@link-color": "@brand-primary",
+    "@link-color": "#11009E",
     "@link-hover-color": "darken(@link-color, 15%)",
     "@link-hover-decoration": "underline",
     "@font-family-sans-serif": "-apple-system, BlinkMacSystemFont, 'Roboto', sans-serif",
@@ -292,10 +292,10 @@
     "@list-group-bg": "#fff",
     "@list-group-border": "#fff",
     "@list-group-border-radius": "@border-radius-base",
-    "@list-group-hover-bg": "lighten(@brand-primary, 40%)",
+    "@list-group-hover-bg": "lighten(#158EBA, 50%)",
     "@list-group-active-color": "@component-active-color",
     "@list-group-active-bg": "@component-active-bg",
-    "@list-group-active-border": "@list-group-active-bg",
+    "@list-group-active-border": "lighten(@brand-primary, 40%)",
     "@list-group-active-text-color": "lighten(@list-group-active-bg, 40%)",
     "@list-group-disabled-color": "@gray-light",
     "@list-group-disabled-bg": "@gray-lighter",
@@ -411,5 +411,5 @@
     "close.less"
   ],
   "js": [],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=ab52b0c72ff66506dba442793dced8a7"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=9ef59e04c70078896704554b13ccee60"
 }

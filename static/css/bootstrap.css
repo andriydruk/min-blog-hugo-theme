@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=ab52b0c72ff66506dba442793dced8a7)
- * Config saved to config.json and https://gist.github.com/ab52b0c72ff66506dba442793dced8a7
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=9ef59e04c70078896704554b13ccee60)
+ * Config saved to config.json and https://gist.github.com/9ef59e04c70078896704554b13ccee60
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -300,12 +300,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #e32636;
+  color: #11009e;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #a71622;
+  color: #090052;
   text-decoration: underline;
 }
 a:focus {
@@ -2600,7 +2600,7 @@ fieldset[disabled] .btn-danger.focus {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #e32636;
+  color: #11009e;
   font-weight: normal;
   border-radius: 0;
 }
@@ -2621,7 +2621,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #a71622;
+  color: #090052;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3027,7 +3027,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #e32636;
+  border-color: #11009e;
 }
 .nav .nav-divider {
   height: 1px;
@@ -3747,7 +3747,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.8;
   text-decoration: none;
-  color: #e32636;
+  color: #11009e;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -3768,7 +3768,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #a71622;
+  color: #090052;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -3966,7 +3966,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #e32636;
+  color: #11009e;
   background-color: #ffffff;
 }
 .list-group-item > .badge {
@@ -4041,7 +4041,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #e32636;
+  border-color: #11009e;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -4299,7 +4299,7 @@ a.list-group-item:focus,
 button.list-group-item:focus {
   text-decoration: none;
   color: #555555;
-  background-color: #fadbdd;
+  background-color: #d4f0fa;
 }
 button.list-group-item {
   width: 100%;
@@ -4328,7 +4328,7 @@ button.list-group-item {
   z-index: 2;
   color: #ffffff;
   background-color: #e32636;
-  border-color: #e32636;
+  border-color: #fadbdd;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,

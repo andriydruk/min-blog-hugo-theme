@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=ab52b0c72ff66506dba442793dced8a7)
- * Config saved to config.json and https://gist.github.com/ab52b0c72ff66506dba442793dced8a7
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=9ef59e04c70078896704554b13ccee60)
+ * Config saved to config.json and https://gist.github.com/9ef59e04c70078896704554b13ccee60
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -524,7 +524,7 @@ fieldset[disabled] .btn-danger.active {
   background-image: linear-gradient(to bottom, #e32636 0%, #c91a29 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe32636', endColorstr='#ffc91a29', GradientType=0);
-  border-color: #c91a29;
+  border-color: #f6b9be;
 }
 .list-group-item.active .badge,
 .list-group-item.active:hover .badge,
