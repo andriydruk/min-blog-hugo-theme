@@ -1,3 +1,13 @@
+             <!-- If external link exists in post matter -->
+            {{ if isset .Params "externallink" }}
+                <a href="{{ .Params.externallink }}" class="list-group-item borderless">
+                  <h4 class="list-group-item-heading">{{ .Title }} <small> / {{ dateFormat .Site.Params.DateForm .Date }}</small></h4>
+                </a>
+            <!-- Else show internal post page -->
+            {{else}}
                 <a href="{{ .Permalink }}" class="list-group-item borderless">
                   <h4 class="list-group-item-heading">{{ .Title }} <small> / {{ dateFormat .Site.Params.DateForm .Date }}</small></h4>
                 </a>
+            {{ end }}
+
+
