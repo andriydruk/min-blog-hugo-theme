@@ -17,7 +17,9 @@
 
     <!-- Roboto fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet"> 
+
     
     <style>
       i {
@@ -44,6 +46,21 @@
             background-position: 50% 20%;
             position: relative;
         }*/
+
+        /* Override list group hihliights to always round */
+        .list-group-item {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        /* Custom font DM Serif Display for title  */
+        .title {
+            font-family: 'DM Serif Display', serif;
+            line-height: 125%;
+        }
+
     </style>
 
     <!-- Embedded Highlight.js-->
