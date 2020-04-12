@@ -6,15 +6,15 @@
               <hr>
               <h4 class="text-center">
                 <small>
-                  <strong>&copy; {{ now.Format "2006"}} <a href="mailto:{{ .Site.Params.email }}" class="uncolored">{{ .Site.Params.Author }}</a></strong>
+                  <strong>
+                    &copy; {{ now.Format "2006"}} • 
+                    <a href="mailto:{{ .Site.Params.email }}" class="uncolored">{{ .Site.Params.Author }}</a>
+                  </strong>
                 </small>
               </h4>
             </div>
         </div>
     </div>
 </footer>
-
-{{ partial "ga.html" . }}
-
 </body>
 </html>
