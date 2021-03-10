@@ -35,7 +35,7 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <div class="list-group borderless">
-            {{ range first 10 (where .Data.Pages ".Params.onmain" true) }}
+            {{ range first 10 (where .Site.RegularPages ".Params.onmain" true) }}
                 {{ .Render "summary"}}
             {{ end }}
           </div>
