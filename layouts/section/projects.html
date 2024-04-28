@@ -1,36 +1,39 @@
 {{ partial "header.html" .}}
 
   <!-- Page Header -->
-  <header class="intro-header">
-   <div class="container">
-     <div class="row">
-       <a href="{{ $.Site.BaseURL }}"><img src="{{ $.Site.BaseURL }}/img/logo.jpg" class="img-circle center-block" width="120" height="120"></a>
-     </div>
-     <div class="row">
-       <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
-           <h1 class="title text-center">Projects</h1>
-                <h4 class="text-center">
-                  <small>
-                    List of open source projects I'm working on
-                  </small>
-                </h4>
-          <hr class="small">
+    <header class="intro-header">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+            <h3>
+              <small>
+                <strong><a href="{{ .Site.Params.Baseurl }}/" class="uncolored">Blog</a></strong> •
+                <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored" style="text-decoration: underline;">Projects</a></strong> •
+                <strong><a href="{{ .Site.Params.Baseurl }}/about" class="uncolored">About</a></strong>
+              </small>
+            </h3>
+            <div class="alert alert-warning" style="line-height: 1.5;">
+              <h4>🇺🇦 #StandWithUkraine</h4>
+              <p class="small">On Feb. 24, 2022 Russia declared an <a class="btn-warning" href="https://war.ukraine.ua/russia-war-crimes/">unprovoked war on Ukraine</a> and launched a full-scale invasion. Russia is currently bombing peaceful Ukrainian cities, including schools and hospitals and attacking civilians who are fleeing conflict zones.</p>
+              <p class="small">Please support Ukraine by lobbying your governments, protesting peacefully, and donating money to support the people of Ukraine. Below are links to trustworthy organizations that are helping to defend Ukraine in this unprovoked war: </p>
+              <ul>
+              <li><a class="btn-warning" href="https://www.comebackalive.in.ua/donate">Donate to Come Back Alive</a></li>
+              <li><a class="btn-warning" href="https://koloua.com/en/">Donate to KOLO</a></li>
+              <li><a class="btn-warning" href="https://prytulafoundation.org/en">Donate to Prytula Foundation</a></li>
+              </ul>
+            </div>
+             <h1 class="title text-center">What I worked on</h1>
+            <hr class="small">
+         </div>
        </div>
      </div>
-   </div>
-  </header>
+    </header>
 
     <!-- Main Content -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="list-group borderless">
             {{ range .Data.Pages }}
                 {{ .Render "single"}}
             {{ end }}
-          </div>
-        </div>
-      </div>
     </div>
 
 {{ partial "footer.html" .}}

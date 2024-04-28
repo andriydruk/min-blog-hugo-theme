@@ -1,32 +1,35 @@
 {{ partial "header.html" .}}
 
   <!-- Page Header -->
-  <header class="intro-header">
+  
    <div class="container">
      <div class="row">
-       <img src="{{ $.Site.BaseURL }}/img/logo.jpg" class="img-circle center-block" width="120" height="120">
-     </div>
-     <div class="row">
-       <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
-           <h1 class="title text-center">{{ title .Site.Title }}</h1>
-                <h4 class="text-center">
-                  <small>
-                    <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored">Projects</a></strong> •
-                    <strong><a href="https://github.com/{{ .Site.Params.Github }}" class="uncolored">Github</a></strong> •
-                    <strong><a href="https://twitter.com/{{ .Site.Params.Twitter }}" class="uncolored">Twitter</a></strong> •
-                    <strong><a href="{{ .Site.Params.Baseurl }}/post/about" class="uncolored">About</a></strong>
-                  </small>
-                </h4>
-          <hr class="small">
+       <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+           <h3>
+              <small>
+                <strong><a href="{{ .Site.Params.Baseurl }}/" class="uncolored" style="text-decoration: underline;">Blog</a></strong> •
+                <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored">Projects</a></strong> •
+                <strong><a href="{{ .Site.Params.Baseurl }}/about" class="uncolored">About</a></strong>
+              </small>
+           </h3>
+    
+          <img src="{{ $.Site.BaseURL }}/img/logo.jpg" style="float: left; margin-left: -145px; margin-top: 0px;" class="img-circle" width="120" height="120">  
+
+          <div class="alert alert-info" style="font-size: 85%; line-height: 1.5;">
+            Hi!
+
+            <p>I’m Andrew. Here I write about programming for mobile platforms</p>
+
+            <p>I am also the creator of developer tools such as <a href="https://play.google.com/store/apps/details?id=com.druk.lmplayground">LM Playground</a>, <a href="https://github.com/readdle/swift-android-toolchain">Swift Android Toolchain</a> and <a href="https://github.com/andriydruk/BonjourBrowser">Bonjour Browser</a>. If you find my tools and insights valuable, consider supporting my work on <a href="https://buymeacoffee.com/andriydruk">buymeacoffee</a>.</p>
+          </div>
        </div>
      </div>
    </div>
-  </header>
 
     <!-- Main Content -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
           <div class="list-group borderless">
             {{ range first 10 (where .Site.RegularPages ".Params.onmain" true) }}
                 {{ .Render "summary"}}
@@ -35,5 +38,3 @@
         </div>
       </div>
     </div>
-
-{{ partial "footer.html" .}}

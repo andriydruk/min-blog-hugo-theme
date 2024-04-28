@@ -1,0 +1,28 @@
+{{ partial "header.html" .}}
+
+  <!-- Page Header -->
+  
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+           <h3>
+              <small>
+                <strong><a href="{{ .Site.Params.Baseurl }}/" class="uncolored">Blog</a></strong> •
+                <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored">Projects</a></strong> •
+                <strong><a href="{{ .Site.Params.Baseurl }}/about" class="uncolored" style="text-decoration: underline;">About</a></strong>
+              </small>
+           </h3>
+       </div>
+     </div>
+   </div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+            {{ range (where .Data.Pages "Type" "about") }}
+                {{ .Render "single"}}
+            {{ end }}
+        </div>
+      </div>
+    </div>

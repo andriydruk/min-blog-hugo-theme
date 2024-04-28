@@ -1,5 +1,16 @@
-
-          <a href="{{ .Params.repo }}" class="list-group-item borderless uncolored">
-              <h4 class="list-group-item-heading">{{ .Title }}<small> / {{ .Params.project_type}} </small></h4>
-              <small>{{ .Content }}</small>
-          </a>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <img src="{{ .Params.Image }}" class="img-fluid" style="width: 100%; border-radius: 3%;">
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <h4 class="list-group-item-heading">
+        <a href="{{ .Params.repo }}" style="text-color: black;">{{ .Title }}</a>
+        {{ if isset .Params "stars" }}
+          <small>  ★ {{ .Params.stars}} </small>
+        {{else}}
+        {{ end }}
+      </h4>
+      {{ .Content }}
+    </div>
+</div>
+<br>
