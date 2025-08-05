@@ -34,15 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-                  {{ .Content }} 
-
-                  <div class="alert alert-info" style="font-size: 85%; line-height: 1.5;">
-                    Hi!
-
-                    <p>I’m Andrew. Here I write about programming for mobile platforms</p>
-
-                    <p>I am also the creator of developer tools such as <a href="https://play.google.com/store/apps/details?id=com.druk.lmplayground">LM Playground</a>, <a href="https://github.com/readdle/swift-android-toolchain">Swift Android Toolchain</a> and <a href="https://github.com/andriydruk/BonjourBrowser">Bonjour Browser</a>. If you find my tools and insights valuable, consider supporting my work on <a href="https://buymeacoffee.com/andriydruk">buymeacoffee</a>.</p>
-                  </div>
+                  {{ .Content }}
 
                   {{ if isset .Params "comments" }}
                     {{ partial "comments.html" .}}
