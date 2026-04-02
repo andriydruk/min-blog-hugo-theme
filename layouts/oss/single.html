@@ -13,7 +13,7 @@
                 <strong><a href="{{ .Site.Params.Baseurl }}/about" class="uncolored">About</a></strong>
               </small>
             </h3>
-             <h1 class="title text-center">{{ title .Title }}</h1>
+             <h1 class="title text-center">{{ title .Title }}{{ with .Params.subtitle }}<br>{{ . }}{{ end }}</h1>
              <hr class="small">
          </div>
        </div>

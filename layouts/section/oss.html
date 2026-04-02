@@ -26,7 +26,7 @@
               <li><a class="btn-warning" href="https://prytulafoundation.org/en">Donate to Prytula Foundation</a></li>
               </ul>
             </div>
-             <h1 class="title text-center">{{ title .Title }}</h1>
+             <h1 class="title text-center">{{ title .Title }}{{ with .Params.subtitle }}<br>{{ . }}{{ end }}</h1>
              <hr class="small">
          </div>
        </div>
