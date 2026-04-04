@@ -63,6 +63,89 @@
             margin-bottom: 40px;
         }
 
+        /* ── Timeline ── */
+        .timeline {
+            position: relative;
+        }
+
+        /* Continuous vertical line spanning full timeline height */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            /* center of col-sm-1 after col-sm-5: (5/12 + 0.5/12) * 100% ≈ 45.83% */
+            left: calc(5 / 12 * 100% + 1 / 24 * 100%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            margin-left: -1px;
+            background: #ddd;
+        }
+
+        .timeline-center {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Year label */
+        .timeline-year {
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .timeline-year-label {
+            display: inline-block;
+            position: relative;
+            font-family: 'Ermilov';
+            font-size: 14px;
+            color: #999;
+            background: #fff;
+            padding: 6px 8px;
+            z-index: 1;
+            line-height: 1;
+        }
+
+        /* Project entry */
+        .timeline-item {
+            margin-bottom: 40px;
+        }
+
+        /* Dot on the timeline */
+        .timeline-dot {
+            position: relative;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #555;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #ddd;
+            margin: 6px auto 0;
+            z-index: 1;
+        }
+
+        /* ── Timeline responsive ── */
+        @media (max-width: 767px) {
+            .timeline::before {
+                display: none;
+            }
+
+            .timeline-center {
+                display: none;
+            }
+
+            .timeline-year {
+                text-align: center;
+                margin-bottom: 12px;
+            }
+
+            .timeline-year-label {
+                background: transparent;
+            }
+
+            .timeline-item {
+                margin-bottom: 30px;
+            }
+        }
+
     </style>
 
     <!-- Embedded Highlight.js-->

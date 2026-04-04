@@ -9,7 +9,7 @@
               <small>
                 <strong><a href="{{ .Site.Params.Baseurl }}/" class="uncolored">Blog</a></strong> •
                 <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored" style="text-decoration: underline;">Projects</a></strong> •
-                <strong><a href="{{ .Site.Params.Baseurl }}/oss" class="uncolored">Open Source</a></strong> •
+                <strong><a href="{{ .Site.Params.Baseurl }}/oss" class="uncolored">OSS</a></strong> •
                 <strong><a href="{{ .Site.Params.Baseurl }}/about" class="uncolored">About</a></strong>
               </small>
             </h3>
@@ -32,9 +32,26 @@
 
     <!-- Main Content -->
     <div class="container">
-            {{ range .Data.Pages }}
-                {{ .Render "single"}}
-            {{ end }}
+      <div class="timeline">
+        {{ $currentYear := "" }}
+        {{ range .Data.Pages }}
+          {{ $year := .Date.Format "2006" }}
+          {{ if ne $year $currentYear }}
+            <div class="timeline-year">
+              <div class="col-sm-5 hidden-xs"></div>
+              <div class="col-sm-1 timeline-center">
+                <span class="timeline-year-label">{{ $year }}</span>
+              </div>
+              <div class="col-sm-6 hidden-xs"></div>
+              <div class="clearfix"></div>
+            </div>
+            {{ $currentYear = $year }}
+          {{ end }}
+          <div class="timeline-item">
+            {{ .Render "single" }}
+          </div>
+        {{ end }}
+      </div>
     </div>
 
 {{ partial "footer.html" .}}
