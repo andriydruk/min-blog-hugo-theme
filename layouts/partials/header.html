@@ -144,7 +144,34 @@
             .timeline-item {
                 margin-bottom: 30px;
             }
+
+            .timeline-item .col-sm-5 {
+                margin-bottom: 16px;
+            }
         }
+
+        /* ── Sticky image per project (desktop) ── */
+        @media (min-width: 768px) {
+            .timeline-row {
+                display: flex;
+                /* default stretch makes columns full height of row */
+            }
+
+            .timeline-row > [class*="col-"] {
+                float: none; /* override Bootstrap float for flex */
+            }
+
+            .sticky-img-wrap {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 40px;
+            }
+
+            .timeline-item {
+                margin-bottom: 40px;
+            }
+        }
+
 
     </style>
 
