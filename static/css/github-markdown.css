@@ -1,0 +1,287 @@
+/* GitHub Markdown Body - Scoped article text styling */
+/* Typography inspired by lucumr.pocoo.org (Lora headings, Merriweather body) */
+
+.markdown-body {
+    font-size: 17px;
+    line-height: 25px;
+    color: #1f2328;
+    word-wrap: break-word;
+}
+
+/* Headings */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.markdown-body h1 {
+    font-size: 52px;
+    line-height: 56px;
+    margin: 5px 0 25px 0;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #d1d9e0;
+}
+
+.markdown-body h2 {
+    font-size: 42px;
+    line-height: 44px;
+    margin: 25px 0 10px 0;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #d1d9e0;
+}
+
+.markdown-body h3 {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 35px 0 10px 0;
+}
+
+.markdown-body h4 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.markdown-body h5 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.markdown-body h6 {
+    font-size: 17px;
+    line-height: 22px;
+    color: #656d76;
+}
+
+/* Paragraphs */
+.markdown-body p {
+    margin: 15px 0;
+}
+
+/* Links */
+.markdown-body a {
+    color: #0969da;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.markdown-body a:hover {
+    color: #0550ae;
+}
+
+/* Strong */
+.markdown-body strong {
+    font-weight: 700;
+}
+
+/* Inline code */
+.markdown-body code {
+    font-family: 'Ubuntu Mono', ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    background-color: #eff1f3;
+    border-radius: 6px;
+    color: #1f2328;
+}
+
+/* Code blocks */
+.markdown-body pre {
+    padding: 16px !important;
+    overflow: auto;
+    font-size: 0.9em;
+    line-height: 1.5;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    border: none;
+    margin: 15px 0;
+}
+
+.markdown-body pre code {
+    font-size: 100%;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+}
+
+/* Lists */
+.markdown-body ul,
+.markdown-body ol {
+    padding-left: 2em;
+    margin: 15px 0;
+}
+
+.markdown-body li {
+    margin-top: 0.25em;
+}
+
+.markdown-body li + li {
+    margin-top: 0.25em;
+}
+
+/* Nested lists */
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ul,
+.markdown-body ol ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Blockquotes */
+.markdown-body blockquote {
+    border-left: 0.25em solid #d1d9e0;
+    padding: 0 1em;
+    color: #656d76;
+    margin: 15px 0;
+}
+
+.markdown-body blockquote > :first-child {
+    margin-top: 0;
+}
+
+.markdown-body blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+/* Tables */
+.markdown-body table {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #d1d9e0;
+}
+
+.markdown-body table th {
+    font-weight: 600;
+    background-color: #f6f8fa;
+}
+
+.markdown-body table tr:nth-child(even) {
+    background-color: #f6f8fa;
+}
+
+/* Images */
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Horizontal rules */
+.markdown-body hr {
+    height: 0.25em;
+    background-color: #d1d9e0;
+    border: 0;
+    margin: 24px 0;
+    padding: 0;
+}
+
+/* Syntax highlighting - Highlight.js overrides */
+.markdown-body .hljs {
+    background: #f6f8fa !important;
+    color: #1f2328 !important;
+    border: none !important;
+    border-radius: 6px;
+}
+
+.markdown-body .hljs-keyword { color: #cf222e !important; }
+.markdown-body .hljs-string { color: #0a3069 !important; }
+.markdown-body .hljs-comment { color: #6e7781 !important; font-style: italic; }
+.markdown-body .hljs-number { color: #0550ae !important; }
+.markdown-body .hljs-function { color: #8250df !important; }
+.markdown-body .hljs-variable { color: #953800 !important; }
+.markdown-body .hljs-title { color: #8250df !important; }
+.markdown-body .hljs-type { color: #0550ae !important; }
+.markdown-body .hljs-built_in { color: #0550ae !important; }
+.markdown-body .hljs-attr { color: #0550ae !important; }
+.markdown-body .hljs-params { color: #1f2328 !important; }
+
+/* Syntax highlighting - Hugo Chroma overrides */
+.markdown-body .highlight pre,
+.markdown-body pre.chroma {
+    background-color: #f6f8fa !important;
+    color: #1f2328 !important;
+    border: none !important;
+    border-radius: 6px;
+    padding: 16px !important;
+}
+
+.markdown-body .chroma .kd,
+.markdown-body .chroma .k,
+.markdown-body .chroma .kt { color: #cf222e; }
+.markdown-body .chroma .nc,
+.markdown-body .chroma .nf,
+.markdown-body .chroma .nd { color: #8250df; }
+.markdown-body .chroma .s,
+.markdown-body .chroma .s1,
+.markdown-body .chroma .s2,
+.markdown-body .chroma .sa { color: #0a3069; }
+.markdown-body .chroma .c,
+.markdown-body .chroma .c1,
+.markdown-body .chroma .cm,
+.markdown-body .chroma .cp { color: #6e7781; font-style: italic; }
+.markdown-body .chroma .mi,
+.markdown-body .chroma .mf,
+.markdown-body .chroma .mh,
+.markdown-body .chroma .mo { color: #0550ae; }
+.markdown-body .chroma .n,
+.markdown-body .chroma .nb,
+.markdown-body .chroma .p { color: #1f2328; }
+.markdown-body .chroma .o { color: #0550ae; }
+.markdown-body .chroma .nx { color: #1f2328; }
+
+/* Navigation links */
+a.uncolored {
+    font-family: 'Lora', serif;
+}
+
+/* Stand with Ukraine alert */
+.alert-warning {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.alert-warning h4 {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .markdown-body {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .markdown-body h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .markdown-body h2 {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .markdown-body h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}

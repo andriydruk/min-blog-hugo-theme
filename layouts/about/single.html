@@ -12,6 +12,8 @@
     <!-- <img src="{{ .Params.Image }}" style="float:center; border-radius: 7%; display: block; margin-left: auto; margin-right: auto;"> -->
     <h1 class="title text-center">{{ title .Title }}</h1>
     <hr class="small">
-	{{ .Content }}
+	<div class="markdown-body">
+		{{ .Content }}
+	</div>
 </div>
 
