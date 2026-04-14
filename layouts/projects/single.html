@@ -9,7 +9,7 @@
     </div>
     <div class="col-sm-6">
       <h4 class="list-group-item-heading">
-        <a href="{{ .Params.repo }}" style="text-color: black;">{{ .Title }}</a>
+        {{ .Title }}
         {{ if isset .Params "stars" }}
           <small>  ★ {{ .Params.stars}} </small>
         {{else}}
