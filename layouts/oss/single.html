@@ -1,38 +1,52 @@
 {{ partial "header.html" .}}
 
-    <!-- Page Header -->
-    <header class="intro-header">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-            <h3>
-              <small>
-                <strong><a href="{{ .Site.Params.Baseurl }}/" class="uncolored">Blog</a></strong> •
-                <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored">Projects</a></strong> •
-                <strong><a href="{{ .Site.Params.Baseurl }}/oss" class="uncolored">OSS</a></strong> •
-                <strong><a href="{{ .Site.Params.Baseurl }}/about" class="uncolored">About</a></strong>
-              </small>
-            </h3>
-             <h1 class="title text-center">{{ title .Title }}{{ with .Params.subtitle }}<br>{{ . }}{{ end }}</h1>
-             <hr class="small">
-         </div>
-       </div>
+<!-- Page Header -->
+<header class="intro-header">
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+        <h3>
+          <small>
+            <strong><a href="{{ .Site.Params.Baseurl }}/" class="uncolored">Blog</a></strong> •
+            <strong><a href="{{ .Site.Params.Baseurl }}/projects" class="uncolored">Projects</a></strong> •
+            <strong><a href="{{ .Site.Params.Baseurl }}/oss" class="uncolored" style="text-decoration: underline;">OSS</a></strong> •
+            <strong><a href="{{ .Site.Params.Baseurl }}/about" class="uncolored">About</a></strong>
+          </small>
+        </h3>
+        {{ partial "stand-with-ukraine.html" . }}
+         <h1 class="title text-center">Open Source Reports{{ with .Params.subtitle }}<br>{{ . }}{{ end }}</h1>
+         <hr class="small">
      </div>
-    </header>
+   </div>
+ </div>
+</header>
 
-    <!-- Post Content -->
-    <article class="markdown-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-                  {{ .Content }}
-
-                  {{ if isset .Params "comments" }}
-                    {{ partial "comments.html" .}}
-                  {{ end }}
-                </div>
+<!-- Post Content -->
+<article class="markdown-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+              {{ .Content }}
             </div>
         </div>
-    </article>
+    </div>
+</article>
+
+<!-- All Reports -->
+{{ $pages := (where .Site.RegularPages "Type" "oss").ByDate.Reverse }}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+      <div class="list-group borderless">
+        {{ range $pages }}
+          <a href="{{ .Permalink }}" class="list-group-item borderless">
+            <span class="h4" style="color:#333; font-weight:500; font-family:'Lora', serif;">OSS Report {{ .Params.subtitle }}</span>
+            <span style="color:#999; float: right;">{{ dateFormat $.Site.Params.DateForm .Date }}</span>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
 
 {{ partial "footer.html" .}}
